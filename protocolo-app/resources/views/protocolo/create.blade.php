@@ -24,5 +24,7 @@
 
         <button type="submit">Enviar</button>
     </form>
+
+    <a href="{{ route('consulta.form') }}">Fazer nova consulta</a>
 </body>
 </html>

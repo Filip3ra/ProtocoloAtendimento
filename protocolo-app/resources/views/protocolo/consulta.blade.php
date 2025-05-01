@@ -16,5 +16,7 @@
         <input type="text" name="numero_protocolo" required>
         <button type="submit">Consultar</button>
     </form>
+
+    <a href="{{ route('protocolo.create') }}">Criar Formulário</a>
 </body>
 </html>
