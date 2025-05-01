@@ -5,13 +5,25 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Protocolo;
 
+/**
+ * Esse arquivo representa o controlador ProtocoloController.
+ * Um controlador (controller) é responsável por lidar com as requisições HTTP
+ * e retornar as respostas apropriadas. Ele atua como um intermediário entre o modelo e a visão.
+ * Aqui nós vamos criar um novo protocolo e armazená-lo no banco de dados.
+ */
+
 class ProtocoloController extends Controller
 {
+    // Retorna a view com o formulário de cadastro de protocolo
     public function create()
     {
         return view('protocolo.create');
     }
 
+    /**
+     * Recebe os dados do formulário, valida os campos, gera número de protocolo e
+     * armazena e salva no banco de dados.
+     */
     public function store(Request $request)
     {
         $request->validate([

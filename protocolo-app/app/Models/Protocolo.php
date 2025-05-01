@@ -13,6 +13,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Protocolo extends Model
 {
+    /** 
+     * Define quais campos podem ser preenchidos em massa.
+     * Isso é uma medida de segurança para evitar a atribuição em massa (mass assignment)
+     * de campos que não deveriam ser preenchidos diretamente.
+     */
     protected $fillable = [
         'nome',
         'cpf',
