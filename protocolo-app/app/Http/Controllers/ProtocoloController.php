@@ -50,7 +50,6 @@ class ProtocoloController extends Controller
     {
         return view('protocolo.consulta');
     }
-
     
     //Recebe o número do protocolo, busca no banco de dados e retorna os dados.
     public function consulta(Request $request)
@@ -66,5 +65,11 @@ class ProtocoloController extends Controller
         }
 
         return view('protocolo.resultado', compact('protocolo'));
+    }
+
+    public function dashboard()
+    {
+        $protocolos = Protocolo::latest()->get(); //lista todos ordenados por mais recentes
+        return view('dashboard', compact('protocolos'));
     }
 }
