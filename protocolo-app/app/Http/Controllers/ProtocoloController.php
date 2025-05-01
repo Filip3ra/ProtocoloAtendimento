@@ -45,4 +45,26 @@ class ProtocoloController extends Controller
 
         return "Protocolo registrado com o número: " . $numeroProtocolo;
     }
+
+    public function formConsulta()
+    {
+        return view('protocolo.consulta');
+    }
+
+    
+    //Recebe o número do protocolo, busca no banco de dados e retorna os dados.
+    public function consulta(Request $request)
+    {
+        $request->validate([
+            'numero_protocolo' => 'required',
+        ]);
+
+        $protocolo = Protocolo::where('numero_protocolo', $request->numero_protocolo)->first();
+
+        if (!$protocolo){
+            return back()->with('error', 'Protocolo não encontrado.');
+        }
+
+        return view('protocolo.resultado', compact('protocolo'));
+    }
 }
