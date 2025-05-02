@@ -38,6 +38,7 @@
                         <th class="px-4 py-2">Assunto</th>
                         <th class="px-4 py-2">Status</th>
                         <th class="px-4 py-2">Criado em</th>
+                        <th class="px-4 py-2">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,7 +49,11 @@
                             <td class="px-4 py-2">{{ $protocolo->assunto }}</td>
                             <td class="px-4 py-2">{{ $protocolo->status ?? 'Pendente' }}</td>
                             <td class="px-4 py-2">{{ $protocolo->created_at->format('d/m/Y H:i') }}</td>
-                        </tr>
+                            <td class="px-4 py-2">
+                                <a href="{{ route('protocolo.edit', $protocolo->id) }}"
+                                class="text-blue-500 hover:underline">Editar</a>
+                            </td>
+                        </tr>                        
                     @empty
                         <tr>
                             <td colspan="5" class="px-4 py-2">Nenhum protocolo encontrado.</td>

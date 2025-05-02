@@ -38,6 +38,8 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->group(function (){
     Route::get('dashboard', [ProtocoloController::class, 'dashboard'])->name('dashboard');
+    Route::get('/protocolo,{id}/editar', [ProtocoloController::class, 'edit'])->name('protocolo.edit');
+    Route::put('/protocolo/{id}', [ProtocoloController::class, 'update'])->name('protocolo.update'); 
 });
 
 require __DIR__.'/auth.php';

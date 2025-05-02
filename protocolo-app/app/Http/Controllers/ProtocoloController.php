@@ -72,4 +72,32 @@ class ProtocoloController extends Controller
         $protocolos = Protocolo::latest()->get(); //lista todos ordenados por mais recentes
         return view('dashboard', compact('protocolos'));
     }
+
+    // Editar status do protocolo
+    public function edit($id)
+    {
+        $protocolo = Protocolo::findOrFail($id); // Busca o protocolo pelo ID, se não encontrar, retorna erro 404 
+        return view('protocolo.edit', compact('protocolo'));
+        /**
+         * compact('protocolo') é uma função do PHP que cria um array associativo
+         * onde a chave é o nome da variável e o valor é o valor da variável.
+         * Por exemplo, se a variável $protocolo contém um objeto Protocolo,
+         * o array resultante será ['protocolo' => $protocolo].
+         * Isso é útil para passar dados para a view protocolo.edit com os dados encontrados.
+         */
+    }
+
+    public function update(Request $request, $id)
+    {
+        // Verifica se o campo status foi enviado e é uma string
+        $request->validate([
+            'status' => 'required|string',
+        ]);
+
+        $protocolo = Protocolo::findOrFail($id); // Busca protocolo pelo ID
+        $protocolo->status = $request->status; // Atualiza o status do protocolo com o valor recebido $request->status
+        $protocolo->save(); // Salva no bd
+        // Redireciona para a rota dashboard com uma mensagem de sucesso
+        return redirect()->route('dashboard')->with('success', 'Status atualizado com sucesso.');
+    }
 }

@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('assunto');
             $table->text('descricao');
             $table->string('numero_protocolo')->unique();
-            $table->string('status')->default('recebido');
+            $table->string('status')->default('Recebido');
             $table->timestamps(); // Cria os campos created_at e updated_at automaticamente
         });
     }
