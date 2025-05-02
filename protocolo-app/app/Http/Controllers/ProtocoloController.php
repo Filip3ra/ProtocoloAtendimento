@@ -43,7 +43,7 @@ class ProtocoloController extends Controller
             'numero_protocolo' => $numeroProtocolo,
         ]);
 
-        return "Protocolo registrado com o número: " . $numeroProtocolo;
+        return redirect()->back()->with('success', 'Protocolo criado com sucesso: ' . $numeroProtocolo); 
     }
 
     public function formConsulta()
