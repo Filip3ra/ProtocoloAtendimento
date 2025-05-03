@@ -1,4 +1,4 @@
-# 🎉 Sistema de Gestão de Festas
+# 🎉 Sistema de Gestão de Chamados
 
 Este é um projeto em PHP que implementa um sistema de gestão de chamados com **Laravel Framework** e **MySql**.
 O foco foi em aprender os conceitos base dessas tecnologias para aprendizado.
@@ -20,21 +20,6 @@ Documentação disponível [aqui.](https://www.notion.so/Protocolo-App-1d0709aa4
 - MySql
 - Xampp
 
-<!--
-## 🗂️ Pacotes Necessários do Projeto
-
-Ao criar o arquico EventContext.cs é preciso instalar e adicionar pacotes:
-
-> "dotnet tool install --global dotnet-ef --version 8.\*"
-
-E dentro da pasta do projeto é precio adicionar os pacotes:
-
-> "dotnet add package Microsoft.EntityFrameworkCore --version 8.\*"
-
-> "dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.\*"
-
-> "dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 8.\*"
--->
 ## 🧪 Como Rodar o Projeto
 
 - Clone o repositório;
