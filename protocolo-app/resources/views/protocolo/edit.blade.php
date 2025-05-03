@@ -19,6 +19,7 @@
                 <div class="mb-4">
                     <label for="status" class="block font-medium text-sm text-gray-700">Status</label>
                     <select name="status" id="status" class="form-select rounded-md shadow-sm mt-1 w-full">
+                        <option value="Recebido" {{ $protocolo->status == 'Recebido' ? 'selected' : '' }}>Recebido</option>
                         <option value="Pendente" {{ $protocolo->status == 'Pendente' ? 'selected' : '' }}>Pendente</option>
                         <option value="Em andamento" {{ $protocolo->status == 'Em andamento' ? 'selected' : '' }}>Em andamento</option>
                         <option value="Concluído" {{ $protocolo->status == 'Concluído' ? 'selected' : '' }}>Concluído</option>
