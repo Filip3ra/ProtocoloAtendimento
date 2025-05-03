@@ -16,7 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('protocolo.create')" :active="request()->routeIs('protocolo.create')">
-                        {{ __('Novo Protocolo') }}
+                        {{ __('Novo Chamado') }}
                     </x-nav-link>
                     <x-nav-link :href="route('consulta.form')" :active="request()->routeIs('consulta.form')">
                         {{ __('Consultar') }}

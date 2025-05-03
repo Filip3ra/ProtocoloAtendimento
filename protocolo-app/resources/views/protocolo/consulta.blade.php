@@ -13,7 +13,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
 
                 <h2 class="text-xl font-semibold leading-tight text-gray-800 mb-6">
-                    Consulta de Protocolo
+                    Consultar Chamado
                 </h2>
 
                 @if(session('erro'))
@@ -48,7 +48,7 @@
 
                             <a href="{{ route('protocolo.create') }}"
                             class="text-blue-600 hover:underline text-sm">
-                                Criar nova solicitação
+                                Novo Chamado
                             </a>
 
                             <a href="{{ url('/') }}"

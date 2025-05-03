@@ -14,7 +14,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
                 
                 <h2 class="text-xl font-semibold leading-tight text-gray-800 mb-6">
-                    Nova Solicitação
+                    Solicitação de Chamado
                 </h2>
 
                 @if(session('success'))

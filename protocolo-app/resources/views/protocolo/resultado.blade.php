@@ -28,7 +28,7 @@
                 <div class="mt-6">
                     <a href="{{ route('consulta.form') }}"
                         style="background-color: #2563eb; color: white; padding: 10px 20px; border: none; border-radius: 6px; text-decoration: none; display: inline-block;">
-                        Fazer nova consulta
+                        Nova Consulta
                     </a>                
                 </div>
 
